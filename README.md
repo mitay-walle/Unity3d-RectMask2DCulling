@@ -1,2 +1,2 @@
 ## RectMask2DCulling
-Allow to disable Culling / Softness
+Custom RectMask2D, that allow to disable Culling / Softness
