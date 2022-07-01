@@ -2,19 +2,22 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using Sirenix.OdinInspector;
-using Sirenix.OdinInspector.Editor;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+#if UNITY_EDITOR
+using Sirenix.OdinInspector.Editor;
+#endif
 
 namespace Plugins.UI
 {
+#if UNITY_EDITOR
     [CustomEditor(typeof(RectMask2DCulling))]
     public class RectMask2DCullingEditor : OdinEditor
     {
     }
-
+#endif
     public class RectMask2DCulling : RectMask2D
     {
         private static FieldInfo maskablesField = typeof(RectMask2D).GetField("m_MaskableTargets", BindingFlags.Instance | BindingFlags.NonPublic);
