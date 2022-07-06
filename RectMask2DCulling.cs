@@ -8,12 +8,6 @@ using UnityEngine.UI;
 
 namespace Plugins.UI
 {
-#if UNITY_EDITOR
-    [CustomEditor(typeof(RectMask2DCulling))]
-    public class RectMask2DCullingEditor : Editor
-    {
-    }
-#endif
     public class RectMask2DCulling : RectMask2D
     {
         private static FieldInfo maskablesField = typeof(RectMask2D).GetField("m_MaskableTargets", BindingFlags.Instance | BindingFlags.NonPublic);
@@ -324,4 +318,10 @@ namespace Plugins.UI
     }
 
     #endregion
+    #if UNITY_EDITOR
+    [CustomEditor(typeof(RectMask2DCulling))]
+    public class RectMask2DCullingEditor : Editor
+    {
+    }
+#endif
 }
