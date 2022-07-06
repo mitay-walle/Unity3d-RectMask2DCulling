@@ -19,4 +19,5 @@ Inherite from RectMask2D and add flags to disable Culling
 ![](https://github.com/mitay-walle/Unity3d-RectMask2DCulling/blob/main/RectMask2DCulling_profiling.jpg)
 
 - RectMask2DCulling use reflection to get private properties of parent RectMask2D class, and it add performance overhead
+
 ![](https://github.com/mitay-walle/Unity3d-RectMask2DCulling/blob/main/RectMask2DCulling_performance_scheme.jpg)
