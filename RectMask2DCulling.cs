@@ -6,15 +6,12 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-#if UNITY_EDITOR
-using Sirenix.OdinInspector.Editor;
-#endif
 
 namespace Plugins.UI
 {
 #if UNITY_EDITOR
     [CustomEditor(typeof(RectMask2DCulling))]
-    public class RectMask2DCullingEditor : OdinEditor
+    public class RectMask2DCullingEditor : Editor
     {
     }
 #endif
@@ -32,9 +29,9 @@ namespace Plugins.UI
         [NonSerialized] private Rect m_LastClipRectCanvasSpace;
         [NonSerialized] private Canvas m_Canvas;
 
-        [ShowInInspector] private HashSet<MaskableGraphic> maskableTargets = new HashSet<MaskableGraphic>();
-        [ShowInInspector] private HashSet<IClippable> clipTargets = new HashSet<IClippable>();
-        [ShowInInspector] private List<RectMask2D> clippers = new List<RectMask2D>();
+        private HashSet<MaskableGraphic> maskableTargets = new HashSet<MaskableGraphic>();
+        private HashSet<IClippable> clipTargets = new HashSet<IClippable>();
+        private List<RectMask2D> clippers = new List<RectMask2D>();
 
         private Canvas Canvas
         {
