@@ -1,5 +1,5 @@
 ## RectMask2DCulling
-Custom RectMask2D, that allow to disable Culling / Softness
+Custom RectMask2D, that allow to disable Culling / Softness for better performance
 ## Problem
 Built-in RectMask2D has overhead, that grow linearly with count of active Child UI.Graphic, main reason for this - Culling. When all this UI.Graphic is always visible (![Pooled ScrollRectList](https://github.com/disas69/Unity-Pooled-Scroll-List) or ![Optimized ScrollView Adapter](https://assetstore.unity.com/packages/tools/gui/optimized-scrollview-adapter-68436) used, for example) - Culling is useless
 
